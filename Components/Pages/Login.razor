@@ -1,0 +1,53 @@
+@page "/login"
+@layout Layout.EmptyLayout
+
+
+<div class="d-flex align-center justify-center mud-width-full vh-100 pa-6">
+    <MudCard Elevation="3" Class="pa-2" Style="width: 100%; max-width: 400px; border-radius: 8px;">
+        <MudCardHeader Class="pb-0">
+            <CardHeaderContent>
+                <MudText Typo="Typo.h5" Align="Align.Center"><b>Login to your account</b></MudText>
+                <MudText Typo="Typo.body2" Align="Align.Center" Class="mud-text-secondary mt-2">
+                    Enter your email below to login to your account
+                </MudText>
+            </CardHeaderContent>
+        </MudCardHeader>
+        <MudCardContent>
+            <MudStack Spacing="4">
+                
+                <!-- Email Field -->
+                <div>
+                    <MudText Typo="Typo.body2" Class="mb-1"><b>Email</b></MudText>
+                    <MudTextField T="string" Placeholder="m@example.com" Variant="Variant.Outlined" Required="true" Margin="Margin.Dense" />
+                </div>
+
+                <!-- Password Field -->
+                <div>
+                    <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="mb-1">
+                        <MudText Typo="Typo.body2"><b>Password</b></MudText>
+                        <MudLink Href="#" Underline="Underline.Hover" Typo="Typo.body2" Color="Color.Inherit">
+                            Forgot your password?
+                        </MudLink>
+                    </MudStack>
+                    <MudTextField T="string" InputType="InputType.Password" Variant="Variant.Outlined" Required="true" Margin="Margin.Dense" />
+                </div>
+
+                <!-- Buttons -->
+                <MudStack Spacing="2">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true" Class="text-none">
+                        <b>Login</b>
+                    </MudButton>
+                    <MudButton Variant="Variant.Outlined" FullWidth="true" Class="text-none">
+                        <b>Login with Google</b>
+                    </MudButton>
+                </MudStack>
+
+                <!-- Sign up text -->
+                <MudText Typo="Typo.body2" Align="Align.Center">
+                    Don't have an account? <MudLink Href="#" Underline="Underline.Hover"><b>Sign up</b></MudLink>
+                </MudText>
+                
+            </MudStack>
+        </MudCardContent>
+    </MudCard>
+</div>
